@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TodoList - App</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Beans">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/estilo.css">
+        <!-- Font Rugular -->
+        <!--<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">-->
+        <!-- Font Light -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/93146aa192.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <div class="container">
+            <h1 class="titulo">Gerenciador de Tarefas Diarias</h1>
+            <div class="container-1">
+                <div class="container-date">
+                    <h1 class="date-text dia_semana">Sexta-feira</h1>
+                    <h1 class="date-text data_completo">29-05-2020</h1>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Adicione uma nova tarefa" id="input_task" class="input-task">
+                    <button class="btn-add">ADICIONAR</button>
+                </div>
+                
+                <div class="container-item-message">
+                    <div class="container-item-message-info">
+                        <img src="img/beer_celebration.svg">
+                        <h2 class="container-item-message-text">Hora de relaxar! Você não possui mais tarefas pendentes</h2>
+                    </div>
+                </div>
+
+                <div class="container-item-pendente">
+                    <h2 class="item-pendente-text">Você tem <span class="num_item_pendente">2</span> itens pendentes</h2>    
+                    <!--
+                    <div class="container-item">
+                        <div class="container-item-checkBox add-concluido"></div>
+                        <h2 class="container-item-text">Aprender JavaScript CSS CSS CSS CSS CSS</h2>
+                        <div class="container-item-div remover_text_pendente"><i class="trash far fa-trash-alt"></i></div>
+                    </div>
+                    -->
+                    
+                </div>
+                
+                <div class="container-item-concluido">
+                    <h2 class="item-concluido-text">Tarefas Concluídas: <span class="percent_item_concluido">80%</span></h2>    
+                    
+                    <!--    
+                    <div class="container-item">
+                        <div class="container-item-concluido-checkBox remove-concluido"><i class="checked fas fa-check"></i></div>
+                        <h2 class="container-item-concluido-text">Aprender JavaScript CSS CSS CSS CSS CSS</h2>
+                        <div class="container-item-div remover_text_concluido"><i class="trash far fa-trash-alt"></i></div>
+                    </div>
+                    -->
+                    
+                </div>
+                
+                
+                
+                
+                <div class="container-footer">
+                    <div class="container-footer-text">
+                        <a class="btn-hide-item">Ocultar Concluídas</a>
+                        <a class="btn-show-item">Mostrar Concluídas</a>
+                        <a class="btn-clean-all">Limpar Tudo</a>
+                    </div>
+                </div>
+                
+                
+                
+            </div>
+            
+            
+        </div>
+        
+        <script src="js/app.js"></script>
+        
+    </body>
+    
+    
+</html>

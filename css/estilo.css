@@ -1,0 +1,288 @@
+:root{
+    --cor-principal: #993399;
+    --cor-secundario: #CC33CC;
+    --bg-color: #f4f7fc;
+    --color-green: #DDDDDD;
+    --color-blue: #6664ff;
+    --color-container-div: #E0E8F5;
+    --checked-border: #CFDCEC;
+    --color-black-grey: #444444;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image:  linear-gradient(to bottom, var(--cor-principal), var(--cor-secundario));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+/*********************
+Container
+*********************/
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+/*********************
+Titulo h1
+*********************/
+.titulo{
+    color: white;
+    padding: 10px;
+}
+/*********************
+Container 1
+*********************/
+.container-1{
+    background-color: var(--bg-color);
+    /*width: 50%;*/
+    padding-top: 50px;
+    width: 650px;
+    /*height: 300px;*/
+    margin: 30px auto;
+    border-radius: 10px;
+}
+/**********************
+Sub Container
+**********************/
+.container-date, .form-group, .container-item-pendente, .container-item-concluido, .container-footer, .container-item-message{
+    padding: 10px 30px 10px 30px;
+}
+
+.date-text{
+    font-weight: lighter;
+    color: var(--cor-secundario);
+}
+
+/************************
+Input
+***********************/
+.form-group{
+    display: flex;
+}
+.form-group input[type='text']{
+    width: 90%;
+    padding: 10px;
+    outline-color: var(--cor-principal);
+    border: 1px solid var(--color-green);
+    font-size: 1em;
+    transition: outline-color .5s;
+}
+.form-group .btn-add{
+    padding: 13px 13px;
+    border: none;
+    background-color: var(--color-green);
+    color: white;
+    transition: background-color .5s;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.form-group input[type='text'], .form-group .btn-add{
+    border-radius: 6px;
+}
+
+
+#input_task::-webkit-input-placeholder, #input_task::placeholder{
+    font-style: italic;
+    opacity: .5;
+}
+
+.form-group input[type='text']:focus + .btn-add{
+    background-color: var(--cor-principal);
+}
+/*********************
+Container Item pendente
+*********************/
+.container-item-pendente, .container-item-concluido, .container-item-message{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-item-pendente .item-pendente-text, .container-item-concluido .item-concluido-text{
+    font-weight: lighter;
+    font-size: 1em;
+    padding: 10px 0;
+}
+
+.container-item{
+    background-color: var(--color-container-div);
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+    position: relative;
+    margin: 10px 0;
+}
+
+
+.container-item:hover  .container-item-div{
+    width: 50px;
+    left: 91.5%;
+}
+
+
+.container-item-div{
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: var(--cor-principal);
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .3s linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+
+.container-item-div .trash{
+    color: white;
+}
+
+.container-item-checkBox, .container-item-concluido-checkBox{
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--checked-border); 
+}
+
+.container-item-concluido-checkBox{
+    border: 1px solid var(--checked-border);   
+}
+
+.container-item-concluido-checkBox .checked{
+    color: var(--cor-principal);
+}
+
+.container-item .container-item-text, .container-item .container-item-concluido-text{
+    font-weight: lighter;
+    font-size: 1em;
+    padding-left: 12px;
+}
+
+.container-item .container-item-concluido-text{
+    text-decoration: line-through;
+    color: #888888;
+}
+
+/*****************************************************
+Container Footer
+*****************************************************/
+.container-footer{
+    margin-bottom: 10px;
+}
+
+.container-footer-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.container-footer-text a{
+    padding: 0 15px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: relative;
+    color: var(--color-black-grey);
+}
+/*
+.container-footer-text a:hover{
+    border-bottom: 1px solid var(--cor-principal);
+}*/
+
+.container-footer-text a.btn-hide-item:after, .container-footer-text a.btn-show-item:after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 14%;
+    background-color: darkviolet;
+    top: 20px;
+    left: 15px;
+    transition: .2s linear;
+}
+
+.container-footer-text .btn-clean-all:after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 14%;
+    background-color: darkviolet;
+    top: 20px;
+    left: 15px;
+    transition: .2s linear;
+} 
+
+.container-footer-text a.btn-hide-item:hover:after, .container-footer-text a.btn-show-item:hover:after{
+    width: 83%;
+} 
+.container-footer-text .btn-clean-all:hover:after{
+    width: 76%;
+}
+
+.container-footer-text a.btn-show-item{
+    display: none;
+}
+
+/*****************************
+Container Message
+******************************/
+.container-item-message-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.container-item-message-info img{
+    width: 50px;
+    height: 50px;
+}
+
+.container-item-message-info .container-item-message-text{
+    font-size: 1em;
+    color: var(--color-black-grey);
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+
+.active{
+    display: block;
+}
+
+
+
+
+
+
+
+
